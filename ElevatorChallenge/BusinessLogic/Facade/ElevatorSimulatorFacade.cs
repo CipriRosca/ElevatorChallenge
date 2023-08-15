@@ -122,7 +122,7 @@ namespace ElevatorChallenge.BusinessLogic.Facade
             while (!isUserDoneWithActions)
             {
                 _menuHelper.DisplayPostArrivalMenu();
-                var choice = (ElevatorActions)_userInteractionService.GetUserInput("Enter your choice:", 1, 4);
+                var choice = (ElevatorActions)_userInteractionService.GetUserInput("Enter your choice:", 1, 5);
 
                 switch (choice)
                 {
@@ -138,6 +138,10 @@ namespace ElevatorChallenge.BusinessLogic.Facade
 
                     case ElevatorActions.CallNewElevator:
                         CallElevatorAndBoardPassengers();
+                        break;
+
+                    case ElevatorActions.DisplayStatuses:
+                        _menuHelper.ShowElevatorStatuses();
                         break;
 
                     case ElevatorActions.Exit:

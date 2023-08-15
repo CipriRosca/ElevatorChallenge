@@ -5,6 +5,7 @@
         DeboardPassengers = 1,
         MoveElevator,
         CallNewElevator,
+        DisplayStatuses,
         Exit
     }
 }

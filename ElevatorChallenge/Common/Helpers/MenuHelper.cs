@@ -18,7 +18,8 @@ namespace ElevatorChallenge.Common.Helpers
             _consoleService.DisplayMessage("1. Deboard all passengers");
             _consoleService.DisplayMessage("2. Move to a different floor");
             _consoleService.DisplayMessage("3. Call elevator");
-            _consoleService.DisplayMessage("4. Exit");
+            _consoleService.DisplayMessage("4. Show elevator statuses");
+            _consoleService.DisplayMessage("5. Exit");
         }
 
         public void ShowElevatorStatuses()
