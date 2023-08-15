@@ -13,17 +13,7 @@ namespace ElevatorChallenge.BusinessLogic.Services
             _consoleService = consoleService;
         }
 
-        public int GetUserInput(string prompt, int minValue, int max)
-        {
-            int value;
-            do
-            {
-                value = _consoleService.GetUserChoice(prompt, minValue, max);
-            }
-            while (value < minValue);
-
-            return value;
-        }
+        public int GetUserInput(string prompt, int minValue, int max) => _consoleService.GetUserChoice(prompt, minValue, max);
 
         public IElevatorStrategy ChooseElevatorStrategy()
         {
@@ -32,12 +22,7 @@ namespace ElevatorChallenge.BusinessLogic.Services
             _consoleService.DisplayMessage("1. Select the nearest elevator to your location.");
             _consoleService.DisplayMessage("2. Select an elevator with the least occupancy.");
 
-            int choice;
-            do
-            {
-                choice = GetUserInput("Enter your choice (1-2):", 1, 2);
-            }
-            while (choice < 1 || choice > 2);
+            var choice = GetUserInput("Enter your choice (1-2):", 1, 2);
 
             return ElevatorStrategyFactory.CreateStrategy(choice);
         }

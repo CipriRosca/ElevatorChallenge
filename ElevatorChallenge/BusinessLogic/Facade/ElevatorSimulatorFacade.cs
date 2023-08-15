@@ -63,7 +63,6 @@ namespace ElevatorChallenge.BusinessLogic.Facade
                     return UserChoiceAction.CallElevator;
                 case 2:
                     _menuHelper.ShowElevatorStatuses();
-                    _menuHelper.ShowMenu();
                     return UserChoiceAction.ShowStatuses;
                 case 3:
                     ExitSimulation();
@@ -129,7 +128,6 @@ namespace ElevatorChallenge.BusinessLogic.Facade
                 {
                     case ElevatorActions.DeboardPassengers:
                         DeboardAllPassengers(elevator);
-                        _menuHelper.ShowMenu();
                         RunSimulation(initializeFirstTimeSetup: false);
                         isUserDoneWithActions = true;
                         break;
