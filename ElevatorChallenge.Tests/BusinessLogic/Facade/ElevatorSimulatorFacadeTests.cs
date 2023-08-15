@@ -126,7 +126,7 @@ namespace ElevatorChallenge.Tests.BusinessLogic.Facade
                 .Returns(1)  // Choice to call elevator
                 .Returns(5)  // Floor number
                 .Returns(4)  // Passengers number
-                .Returns(4)  // Exist post arrival loop
+                .Returns(5)  // Exist post arrival loop
                 .Returns(3); // Exit main loop
 
             // Act
